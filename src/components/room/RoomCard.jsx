@@ -1,0 +1,42 @@
+import { Card, Col } from "react-bootstrap";
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+
+const RoomCard = ({ room }) => {
+  return (
+    <Col className="mb-4" xs={12}>
+      <Card key={room.id}>
+        <Card.Body className="d-flex flex-wrap align-items-center">
+          <div className="flex-shrink-0 mr-3 mb-3 mb-md-0">
+            <Card.Img
+              variant="top"
+              src={`data:image/jpeg;base64, ${room.photo}`}
+              alt="Room Photo"
+              style={{ width: "100%", maxWidth: "250px", height: "auto" }}
+            />
+          </div>
+          <div className="flex-grow-1 ml-3 px-5">
+            <Card.Title className="hotel-color">{room.roomType}</Card.Title>
+            <Card.Title className="room-price">${room.roomPrice}</Card.Title>
+            <Card.Text>
+              Some room information goes here for the guest to read through
+            </Card.Text>
+          </div>
+          <div className="flex-shrink-0 mt-3">
+            <Link to={`/booking/${room.id}`} className="btn btn-hotel btn-sm">
+              View / Book Now
+            </Link>
+          </div>
+        </Card.Body>
+      </Card>
+    </Col>
+  );
+};
+
+RoomCard.propTypes = {
+  // setFilteredData: PropTypes.func.isRequired,
+  room: PropTypes.object.isRequired,
+  // id:PropTypes.number.isRequired
+};
+
+export default RoomCard;
