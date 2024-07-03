@@ -17,8 +17,8 @@ const HotelService = () => {
         <Header title={"Our Service"} />
         <Row>
           <h4 className="text-center mt-4">
-            Services at <span className="hotel-color">Presidential - </span>{" "}
-            Hotel
+            Services at <span className="hotel-color">Hotel - </span>{" "}
+            Presidential
             <span className="g-2">
               <FaClock
                 style={{ marginLeft: "8px" }}

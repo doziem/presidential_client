@@ -10,7 +10,7 @@ const NavBar = () => {
     <nav className="navbar navbar-expand-lg by-body-tertiary px-5 shadow mt-5 sticky-top">
       <div className="container-fluid">
         <Link to={"/"} className="nav-link">
-          <span className="hotel-color ">Presidential Hotel</span>
+          <span className="hotel-color "> Hotel Presidential</span>
         </Link>
         <button
           className="navbar-toggler"
